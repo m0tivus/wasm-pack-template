@@ -2,8 +2,12 @@ import asyncio
 from motivus.client import Client
 
 task_definition = {
-    'algorithm': "{{project-name}}",
-    'algorithm_version': "0.1.0",
+    # local build
+    'wasm_path': "build/{{project-name}}-0.1.0.wasm",
+    'loader_path': "build/{{project-name}}-0.1.0.js",
+    # published build
+    # 'algorithm': "{{project-name}}",
+    # 'algorithm_version': "0.1.0",
     'params': [1, 2]
 }
 

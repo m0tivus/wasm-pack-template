@@ -9,11 +9,8 @@ use wasm_bindgen::prelude::*;
 static ALLOC: wee_alloc::WeeAlloc = wee_alloc::WeeAlloc::INIT;
 
 #[wasm_bindgen]
-extern {
-    fn alert(s: &str);
-}
-
-#[wasm_bindgen]
-pub fn greet() {
-    alert("Hello, {{project-name}}!");
+pub fn main(x1: &JsValue, x2: &JsValue) -> String {
+    let _x1: i32 = x1.into_serde().unwrap();
+    let _x2: i32 = x2.into_serde().unwrap();
+    return format!("Hello {{project-name}}! {:?}", _x1 + _x2);
 }

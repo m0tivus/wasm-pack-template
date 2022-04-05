@@ -1,0 +1,9 @@
+[template]
+cargo_generate_version = "0.9.0"
+
+[placeholders]
+description = { type="string", prompt="A short description of the algorithm" }
+license = { type="string", prompt="Choose a license" }
+url = { type="string", prompt="Your project URL" }
+upstream_url = { type="string", prompt="Your project repository" }
+

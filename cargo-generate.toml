@@ -1,5 +1,6 @@
 [template]
 cargo_generate_version = "0.13.0"
+ignore = ["LICENSE*"]
 
 [placeholders]
 description = { type="string", prompt="A short description of the algorithm", default="" }

@@ -1,34 +1,15 @@
 <div align="center">
 
-  <h1><code>wasm-pack-template</code></h1>
+  <h1>Motivus algorithm using <code>wasm-pack</code></h1>
 
-  <strong>A template for kick starting a Rust and WebAssembly project using <a href="https://github.com/rustwasm/wasm-pack">wasm-pack</a>.</strong>
-
-  <p>
-    <a href="https://travis-ci.org/rustwasm/wasm-pack-template"><img src="https://img.shields.io/travis/rustwasm/wasm-pack-template.svg?style=flat-square" alt="Build Status" /></a>
-  </p>
+  <strong>A template for kick starting a Rust and WebAssembly project powered by <a href="https://github.com/rustwasm/wasm-pack">Motivus Waterbear Cluster</a> processing  power.</strong>
 
   <h3>
-    <a href="https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html">Tutorial</a>
+    <a href="https://motivus.cl/documentation/">Learn more</a>
     <span> | </span>
-    <a href="https://discordapp.com/channels/442252698964721669/443151097398296587">Chat</a>
+    <a href="https://discord.gg/t8f5xNhTJW">Join us on Discord</a>
   </h3>
-
-  <sub>Built with 🦀🕸 by <a href="https://rustwasm.github.io/">The Rust and WebAssembly Working Group</a></sub>
 </div>
-
-## About
-
-[**📚 Read this template tutorial! 📚**][template-docs]
-
-This template is designed for compiling Rust libraries into WebAssembly and
-publishing the resulting package to NPM.
-
-Be sure to check out [other `wasm-pack` tutorials online][tutorials] for other
-templates and usages of `wasm-pack`.
-
-[tutorials]: https://rustwasm.github.io/docs/wasm-pack/tutorials/index.html
-[template-docs]: https://rustwasm.github.io/docs/wasm-pack/tutorials/npm-browser-packages/index.html
 
 ## 🚴 Usage
 
@@ -37,26 +18,36 @@ templates and usages of `wasm-pack`.
 [Learn more about `cargo generate` here.](https://github.com/ashleygwilliams/cargo-generate)
 
 ```
-cargo generate --git https://github.com/rustwasm/wasm-pack-template.git --name my-project
+cargo generate --git https://github.com/m0tivus/wasm-pack-template.git --name my-project
 cd my-project
 ```
 
-### 🛠️ Build with `wasm-pack build`
+## 🛠️ Development Environment Requirements
+* Docker
+   * Your user must belong to the `docker` group.
+* Python = 3.7 | 3.8 | 3.9
+   * We recommend using a `conda` environment.
+* [*Motivus CLI tool* and *Motivus Client library*](https://pypi.org/project/motivus/): `$ pip install motivus`
+
+### 🛠️ Build with `motivus build`
 
 ```
-wasm-pack build
+$ motivus build
 ```
 
-### 🔬 Test in Headless Browsers with `wasm-pack test`
+### 🔬 Test locally with `motivus loopback`
 
 ```
-wasm-pack test --headless --firefox
+$ motivus loopback
+```
+```
+$ WEBSOCKET_URI=ws://localhost:7070/client_socket/websocket python driver.py
 ```
 
-### 🎁 Publish to NPM with `wasm-pack publish`
+### 🎁 Publish to Motivus Marketplace with `motivus push`
 
 ```
-wasm-pack publish
+$ motivus push
 ```
 
 ## 🔋 Batteries Included
